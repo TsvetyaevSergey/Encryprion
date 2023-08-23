@@ -1,4 +1,4 @@
-def caesar_cipher(text, key):
+def caesar_cipher(text:str, key:str):
   newkey = int(key)
   result = ""
   for i in range(len(text)):
