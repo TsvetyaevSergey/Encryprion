@@ -1,4 +1,5 @@
 def caesar_cipher(text, key):
+  newkey = int(key)
   result = ""
   for i in range(len(text)):
     char = text[i]
@@ -8,7 +9,7 @@ def caesar_cipher(text, key):
         base = ord('a')
       else:
         base = ord('A')
-      num = (num - base + key) % 26 + base
+      num = (num - base + newkey) % 26 + base
       result += chr(num)
     else:
       result += char
