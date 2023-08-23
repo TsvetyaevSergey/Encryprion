@@ -50,10 +50,10 @@ def generate_keypair(p: int, q: int) -> Tuple[Tuple[int, int], Tuple[int, int]]:
     return (public_key, private_key)
 
 
-def encrypt(public_key: Tuple[int, int], plaintext: str) -> List[int]:
+def encrypt(public_key: Tuple[int, int], plaintext: str) -> str:
     n, e = public_key
     ciphertext = [pow(ord(char), e, n) for char in plaintext]
-    return ciphertext
+    return str(ciphertext)
 
 
 def decrypt(private_key: Tuple[int, int], ciphertext: List[int]) -> str:
