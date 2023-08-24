@@ -36,4 +36,5 @@ def homophonic_encryption(input_text):
             encrypted_text += random.choice(homophonic_dict[letter])
         else:
             encrypted_text += letter
+        encrypted_text += ' '
     return encrypted_text
