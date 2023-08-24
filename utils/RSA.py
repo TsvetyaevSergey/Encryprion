@@ -34,9 +34,9 @@ def mod_inverse(e: int, phi: int) -> int:
 
 def generate_keypair(p: int, q: int) -> Tuple[Tuple[int, int], Tuple[int, int]]:
     if not (is_prime(p) and is_prime(q)):
-        raise ValueError('both numbers must be prime')
+        raise "Оба числа должны быть простыми"
     elif p == q:
-        raise ValueError('p and q cannot be equal')
+        raise "Числа должны быть разными"
     n = p * q
     phi = (p - 1) * (q - 1)
     e = randint(1, phi)
