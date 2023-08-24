@@ -5,5 +5,5 @@ router = APIRouter(tags=["Trans"])
 
 
 @router.get("/Trans/encrypt", response_model=str)
-def encrypt_RSA(text: str, key: str):
+def transposition(text: str, key: int):
     return encrypt_transposition(key=key, plaintext=text)
